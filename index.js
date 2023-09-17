@@ -31,3 +31,27 @@ function getSalary() {
 }
 
 console.log(getSalary());
+
+/*
+Задание 3
+Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию, 
+которая определяет максимальное значение среди этих чисел
+*/
+
+let firstNumber = Number(prompt('Введите первое число'));
+let secondNumber = Number(prompt('Введите второе число'));
+let thirdNumber = Number(prompt('Введите третье число'));
+
+function getMaxNumber() {
+    let maxNumber = firstNumber;
+    if (secondNumber > maxNumber) {
+        maxNumber = secondNumber;
+    } else {
+        if (thirdNumber > maxNumber) {
+            maxNumber = thirdNumber;
+        }
+    }
+    return maxNumber;
+}
+
+console.log('Максимальное число: ' + getMaxNumber());
